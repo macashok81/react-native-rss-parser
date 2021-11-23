@@ -1,3 +1,13 @@
+exports.getElement = (node, tagName) => {
+  if (!node || !node.getElementsByTagName(tagName)) {
+    return [];
+  }
+
+  const element = node.getElementsByTagName(tagName)[0];
+  
+  return element;
+};
+
 exports.getElements = (node, tagName) => {
   if (!node || !node.getElementsByTagName(tagName)) {
     return [];

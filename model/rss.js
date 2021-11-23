@@ -105,6 +105,11 @@ const rss = {
       },
     },
   ],
+  media: {
+    url: undefined,
+    width: undefined,
+    height: undefined,
+},
 };
 
 module.exports = {

@@ -14,6 +14,11 @@ const getChannelLinks = (node) => {
   }));
 };
 
+const getItemMedia =(node) => {
+ const mediaContent = utils.getElement(node, 'media:content')
+ return mediaContent  && mediaContent !== undefined  ? mediaContent.getAttribute("url") : '';
+}
+
 const getChannelDescription = (node) =>
   utils.getElementTextContent(node, 'description');
 
@@ -164,6 +169,7 @@ const mapItems = (document) => {
     published: getItemPublished(item),
     enclosures: getItemEnclosures(item),
     itunes: itunesParser.parseItem(item),
+    mediaUrl: getItemMedia(item),
   }));
 };
 

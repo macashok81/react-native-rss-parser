@@ -105,7 +105,7 @@ const rss = {
       },
     },
   ],
-  media: {
+  mediaUrl: {
     url: undefined,
     width: undefined,
     height: undefined,

@@ -5,6 +5,8 @@ const itunesParser = require('./itunes');
 
 const getChannelTitle = (node) => utils.getElementTextContent(node, 'title');
 
+const getThumbnailImage = (node) => utils.getElementTextContent(node, 'thumbimage');
+
 const getChannelLinks = (node) => {
   const links = utils.getChildElements(node, 'link');
 
@@ -170,6 +172,7 @@ const mapItems = (document) => {
     enclosures: getItemEnclosures(item),
     itunes: itunesParser.parseItem(item),
     mediaUrl: getItemMedia(item),
+    thumbnailUrl:getThumbnailImage(item),
   }));
 };
 

@@ -110,6 +110,9 @@ const rss = {
     width: undefined,
     height: undefined,
 },
+thumbnail: {
+  url: undefined,
+}
 };
 
 module.exports = {

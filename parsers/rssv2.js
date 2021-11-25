@@ -90,6 +90,9 @@ const getItemLinks = (node) => {
 const getItemDescription = (node) =>
   utils.getElementTextContent(node, 'description');
 
+  const getEncodedContent =(node) => 
+    utils.getElementTextContent(node,'content:encoded')
+
 const getItemContent = (node) =>
   utils.getElementTextContent(node, 'encoded', namespaces.content);
 
@@ -173,6 +176,7 @@ const mapItems = (document) => {
     itunes: itunesParser.parseItem(item),
     mediaUrl: getItemMedia(item),
     thumbnailUrl:getThumbnailImage(item),
+    encodedContent:getEncodedContent(item)
   }));
 };
 
